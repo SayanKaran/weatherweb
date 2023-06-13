@@ -406,7 +406,7 @@
                 document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
                 document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
-                if (hours >= 6 && hours <= 18) {
+                if (hours >= 6 || hours <= 18) {
                     if (data.weather[0].main == "Clouds") {
                         weatherim.src = "clouds.png"
                     } else if (data.weather[0].main == "Clear" || data.weather[0].main == "Sunny") {
